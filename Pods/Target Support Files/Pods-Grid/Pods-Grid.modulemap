@@ -1,6 +1,0 @@
-framework module Pods_Grid {
-  umbrella header "Pods-Grid-umbrella.h"
-
-  export *
-  module * { export * }
-}
