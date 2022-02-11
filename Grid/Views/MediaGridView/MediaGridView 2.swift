@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct MediaGridView: View {
 
     @StateObject private var viewModel = MediaGridViewModel()
@@ -33,13 +32,15 @@ struct MediaGridView: View {
                     item.getAlert()
                 }
 
-                //                Picker("", selection: <#T##Binding<_>#>)
+//                Picker("", selection: <#T##Binding<_>#>)
             }
         }
     }
 
 
-    
+    func getWidth(){
+
+    }
 
     func getMediaViews(index: Int, width: CGFloat) -> some View{
 
@@ -47,32 +48,37 @@ struct MediaGridView: View {
 
         let mediaWidth = width / 3
 
-        var array: [MediaAndInfoViewModel] = []
+        var mediaViewModelArray: [MediaViewModel] = []
 
-        let (model, expectedHeight) = viewModel.getViewModelsAndHeight(index: index, width: mediaWidth)
-        array.append(model)
-        height = max(height, expectedHeight)
+        let first = viewModel.medias[index]
+        let firstVM = MediaViewModel(media: first)
+        mediaViewModelArray.append(firstVM)
+        height = max( height , firstVM.calculateHeight(width: mediaWidth))
+
 
         if viewModel.medias.indices.contains(index + 1){
-            let (model, expectedHeight) = viewModel.getViewModelsAndHeight(index: index + 1, width: mediaWidth)
-            array.append(model)
-            height = max(height, expectedHeight)
+            let second = viewModel.medias[index + 1]
+            let secondVM = MediaViewModel(media: second)
+            mediaViewModelArray.append(secondVM)
+           height = max( height , secondVM.calculateHeight(width: mediaWidth))
         }
 
         if viewModel.medias.indices.contains(index + 2){
-            let (model, expectedHeight) = viewModel.getViewModelsAndHeight(index: index + 2, width: mediaWidth)
-            array.append(model)
-            height = max(height, expectedHeight)
+            let third = viewModel.medias[index + 2]
+            let thirdVM = MediaViewModel(media: third)
+            mediaViewModelArray.append(thirdVM)
+            height = max( height , thirdVM.calculateHeight(width: mediaWidth))
         }
 
         return HStack{
-            ForEach(array){ item in
-                NavigationLink(destination: MediaInfoView(viewModel: item.mediaInfoViewModel)) {
-                    MediaView(viewModel: item.mediaViewModel)
-                        .frame(width: mediaWidth,
-                               height: item.mediaViewModel.calculateHeight(width: mediaWidth),
-                               alignment: .center)
-                }
+            ForEach(mediaViewModelArray){ vm in
+                MediaView(viewModel: vm)
+                    .frame(width: mediaWidth,
+                           height: vm.calculateHeight(width: mediaWidth),
+                           alignment: .center)
+                    .onTapGesture {
+                        
+                    }
             }
         }
         .frame(height: CGFloat(height))

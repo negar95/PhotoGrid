@@ -13,11 +13,12 @@ struct Media: Identifiable, Codable{
     
     var size,
         width,
-        height: Int?
+        height: Int
     
     var id,
         thumbnailURL,
-        downloadURL: String?
+        downloadURL,
+        createdAt: String
 
     enum CodingKeys: String, CodingKey {
         case id,
@@ -25,6 +26,7 @@ struct Media: Identifiable, Codable{
 
         case thumbnailURL = "thumbnail_url"
         case downloadURL = "download_url"
+        case createdAt = "created_at"
         case width = "resx"
         case height = "resy"
 

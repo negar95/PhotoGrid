@@ -9,6 +9,14 @@ import Foundation
 import UIKit
 import Alamofire
 
+struct MediaAndInfoViewModel: Identifiable{
+
+    var id = UUID()
+    var mediaViewModel: MediaViewModel
+    var mediaInfoViewModel: MediaInfoViewModel
+}
+
+
 final class MediaGridViewModel: ObservableObject{
 
     @Published var medias: [Media] = []
@@ -42,6 +50,19 @@ final class MediaGridViewModel: ObservableObject{
                 }
             }
         }
+    }
+
+    func getViewModelsAndHeight(index: Int, width: CGFloat) -> (MediaAndInfoViewModel, CGFloat){
+
+        let media = medias[index]
+        let viewModel = MediaViewModel(media: media)
+        let infoViewModel = MediaInfoViewModel(media: media)
+
+        let height = viewModel.calculateHeight(width: width)
+        let viewModels = MediaAndInfoViewModel(mediaViewModel: viewModel,
+                                               mediaInfoViewModel: infoViewModel)
+
+        return (viewModels, height)
     }
 
 }

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import URLImage
 
 struct MediaLocation{
     var width: Int = 0
@@ -16,34 +16,38 @@ struct MediaLocation{
 }
 
 struct MediaView: View {
-
+    
     @StateObject var viewModel: MediaViewModel
-
+    
     var body: some View {
-
-        ZStack(alignment: .bottomTrailing){
-
-            GeometryReader{ geometry in
-
-            Image(uiImage: viewModel.image)
-                .resizable()
-                .cornerRadius(5)
-                .onAppear {
-                    let width = Int(geometry.size.width)
-                    let height = Int(geometry.size.height)
-
-                    viewModel.loadImage(width: width,
-                                        height: height)
+        
+        GeometryReader{ geometry in
+            
+            ZStack(alignment: .bottomTrailing){
+                
+                let width = Int(geometry.size.width)
+                let height = Int(geometry.size.height)
+                
+                if let url = viewModel.getImageURL(width: width, height: height){
+                    URLImage(url: url,
+                             content: { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(5)
+                    })
                 }
-            }
-            Text(viewModel.calculateMBSize() + " MB")
-                .font(.system(size: 12))
-                .fontWeight(.bold)
-                .foregroundColor(.black)
-                .padding(2)
-                .background(Color.white.opacity(0.2))
-        }
 
+
+                Text(viewModel.calculateMBSize() + " MB")
+                    .font(.system(size: 12))
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                    .padding(2)
+                    .background(Color.white.opacity(0.2))
+            }
+        }
+        
     }
 }
 

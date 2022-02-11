@@ -9,6 +9,22 @@ import Foundation
 import UIKit
 
 final class MediaInfoViewModel: ObservableObject{
-    @Published var image: UIImage = UIImage()
-//    var media: Media
+
+    var media: Media
+    var createdAt: Date
+
+    required init(media: Media) {
+        self.media = media
+        self.createdAt = media.createdAt.toDate()
+    }
+
+    func getImageURL(width: Int, height: Int) -> URL?{
+
+        let imageURL = media.thumbnailURL
+        let stringWidth = "\(width)"
+        let stringHeight = "\(height)"
+
+        return URLs.getDownloadPath(urlString: imageURL, width: stringWidth, height: stringHeight)
+
+    }
 }

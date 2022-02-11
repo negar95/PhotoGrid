@@ -11,7 +11,7 @@ import Alamofire
 class NetworkHelper: NSObject {
 
     static let shared = NetworkHelper()
-    private let imageCache = NSCache<NSString, UIImage>()
+
     private let apiCache = NSCache<NSString, MediaList>()
     private let apiCacheKey = NSString(string: URLs.mediaURL)
 
@@ -64,42 +64,8 @@ class NetworkHelper: NSObject {
 
     }
 
-    func downloadImage(from urlString: String, width: String, height: String, completed: @escaping (UIImage?) -> Void) {
-
-        let cacheKey = NSString(string: urlString)
-
-        if let image = imageCache.object(forKey: cacheKey) {
-            completed(image)
-            return
-        }
-
-        guard var urlComponent = URLComponents(string: urlString) else {
-            completed(nil)
-            return
-        }
-
-        urlComponent.queryItems = [
-            URLQueryItem(name: "w", value: width),
-            URLQueryItem(name: "h", value: height),
-            URLQueryItem(name: "m", value: "crop")
-        ]
-
-        let request = URLRequest(url: urlComponent.url!)
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, let image = UIImage(data: data) else {
-                completed(nil)
-                return
-            }
-
-            self.imageCache.setObject(image, forKey: cacheKey)
-            completed(image)
-        }
-
-        task.resume()
-    }
 
     func clearCache(){
         apiCache.removeAllObjects()
-        imageCache.removeAllObjects()
     }
 }

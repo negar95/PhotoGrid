@@ -20,31 +20,22 @@ final class MediaViewModel: ObservableObject, Identifiable{
 
     required init(media: Media) {
         self.media = media
-        self.sourceImageWidth = CGFloat(media.width ?? 0)
-        self.sourceImageHeight = CGFloat(media.height ?? 0)
+        self.sourceImageWidth = CGFloat(media.width)
+        self.sourceImageHeight = CGFloat(media.height)
     }
 
-    func loadImage(width: Int, height: Int){
+    func getImageURL(width: Int, height: Int) -> URL?{
 
+        let imageURL = media.thumbnailURL
         let stringWidth = "\(width)"
         let stringHeight = "\(height)"
 
-        let imageURL = media.thumbnailURL ?? ""
+        return URLs.getDownloadPath(urlString: imageURL, width: stringWidth, height: stringHeight)
 
-        NetworkHelper.shared.downloadImage(from: imageURL,
-                                           width: stringWidth,
-                                           height: stringHeight)
-        { fetchedImage in
-            guard let uiImage = fetchedImage else { return }
-            DispatchQueue.main.async {
-                self.image = uiImage
-            
-            }
-        }
     }
 
     func calculateMBSize() -> String{
-        return media.size?.getMegaByteFromByteValue() ?? ""
+        return media.size.getMegaByteFromByteValue()
     }
 
     func calculateHeight(width: CGFloat) -> CGFloat{
