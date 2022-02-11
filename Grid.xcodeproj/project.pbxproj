@@ -1,0 +1,864 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C70D3FF563EF29D43388E29 /* Pods_GridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E280E5341EFCA78272A6D7 /* Pods_GridTests.framework */; };
+		33426BDFCDB23B24B35159F9 /* Pods_Grid_GridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6824049817E9CB07600E243 /* Pods_Grid_GridUITests.framework */; };
+		7E6BE86D513D2263DCF94468 /* Pods_Grid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E1FB91815E47CCB4AA080B /* Pods_Grid.framework */; };
+		89235DD727B57D9D00DF4AD1 /* MediaGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DD627B57D9D00DF4AD1 /* MediaGridView.swift */; };
+		89235DD927B57DAB00DF4AD1 /* MediaGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DD827B57DAB00DF4AD1 /* MediaGridViewModel.swift */; };
+		89235DDB27B57F3900DF4AD1 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DDA27B57F3900DF4AD1 /* NetworkHelper.swift */; };
+		89235DDE27B581FB00DF4AD1 /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DDD27B581FB00DF4AD1 /* MediaView.swift */; };
+		89235DE327B5866700DF4AD1 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DE227B5866700DF4AD1 /* Int.swift */; };
+		89235DE527B5A3BE00DF4AD1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DE427B5A3BE00DF4AD1 /* Response.swift */; };
+		89235DE727B5A42D00DF4AD1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DE627B5A42D00DF4AD1 /* NetworkError.swift */; };
+		89235DEA27B5A55B00DF4AD1 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DE927B5A55B00DF4AD1 /* URLs.swift */; };
+		89235DEC27B5A60400DF4AD1 /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DEB27B5A60400DF4AD1 /* APError.swift */; };
+		89235DEE27B5B1B600DF4AD1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DED27B5B1B600DF4AD1 /* Alert.swift */; };
+		89235DF327B5B33700DF4AD1 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DF227B5B33700DF4AD1 /* MediaViewModel.swift */; };
+		89235DF527B5C4BE00DF4AD1 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235DF427B5C4BE00DF4AD1 /* AlertItem.swift */; };
+		8993748527B56FC900330FB0 /* GridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993748427B56FC900330FB0 /* GridApp.swift */; };
+		8993748927B56FCC00330FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8993748827B56FCC00330FB0 /* Assets.xcassets */; };
+		8993748C27B56FCC00330FB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8993748B27B56FCC00330FB0 /* Preview Assets.xcassets */; };
+		8993749627B56FCC00330FB0 /* GridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993749527B56FCC00330FB0 /* GridTests.swift */; };
+		899374A027B56FCC00330FB0 /* GridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993749F27B56FCC00330FB0 /* GridUITests.swift */; };
+		899374A227B56FCC00330FB0 /* GridUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899374A127B56FCC00330FB0 /* GridUITestsLaunchTests.swift */; };
+		899374B027B5703A00330FB0 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899374AF27B5703A00330FB0 /* Media.swift */; };
+		89EE9A3627B6A68800840F26 /* MediaInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EE9A3527B6A68800840F26 /* MediaInfoView.swift */; };
+		89EE9A3827B6A69600840F26 /* MediaInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EE9A3727B6A69600840F26 /* MediaInfoViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8993749227B56FCC00330FB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8993747927B56FC900330FB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8993748027B56FC900330FB0;
+			remoteInfo = Grid;
+		};
+		8993749C27B56FCC00330FB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8993747927B56FC900330FB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8993748027B56FC900330FB0;
+			remoteInfo = Grid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FE69B3607DD692B22EAC22C /* Pods-Grid-GridUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grid-GridUITests.debug.xcconfig"; path = "Target Support Files/Pods-Grid-GridUITests/Pods-Grid-GridUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		17BFA8717BCC1ED8AAF42EF2 /* Pods-GridTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridTests.release.xcconfig"; path = "Target Support Files/Pods-GridTests/Pods-GridTests.release.xcconfig"; sourceTree = "<group>"; };
+		53E280E5341EFCA78272A6D7 /* Pods_GridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GridTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5431F2A701E9DC38D4ABB207 /* Pods-Grid-GridUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grid-GridUITests.release.xcconfig"; path = "Target Support Files/Pods-Grid-GridUITests/Pods-Grid-GridUITests.release.xcconfig"; sourceTree = "<group>"; };
+		89235DD627B57D9D00DF4AD1 /* MediaGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridView.swift; sourceTree = "<group>"; };
+		89235DD827B57DAB00DF4AD1 /* MediaGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridViewModel.swift; sourceTree = "<group>"; };
+		89235DDA27B57F3900DF4AD1 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		89235DDD27B581FB00DF4AD1 /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
+		89235DE227B5866700DF4AD1 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		89235DE427B5A3BE00DF4AD1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		89235DE627B5A42D00DF4AD1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		89235DE927B5A55B00DF4AD1 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		89235DEB27B5A60400DF4AD1 /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
+		89235DED27B5B1B600DF4AD1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		89235DF227B5B33700DF4AD1 /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
+		89235DF427B5C4BE00DF4AD1 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		8993748127B56FC900330FB0 /* Grid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8993748427B56FC900330FB0 /* GridApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridApp.swift; sourceTree = "<group>"; };
+		8993748827B56FCC00330FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8993748B27B56FCC00330FB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8993749127B56FCC00330FB0 /* GridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8993749527B56FCC00330FB0 /* GridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTests.swift; sourceTree = "<group>"; };
+		8993749B27B56FCC00330FB0 /* GridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8993749F27B56FCC00330FB0 /* GridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUITests.swift; sourceTree = "<group>"; };
+		899374A127B56FCC00330FB0 /* GridUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		899374AF27B5703A00330FB0 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		89EE9A3527B6A68800840F26 /* MediaInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfoView.swift; sourceTree = "<group>"; };
+		89EE9A3727B6A69600840F26 /* MediaInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfoViewModel.swift; sourceTree = "<group>"; };
+		8AC1E291DA10547CF4E657CB /* Pods-Grid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grid.debug.xcconfig"; path = "Target Support Files/Pods-Grid/Pods-Grid.debug.xcconfig"; sourceTree = "<group>"; };
+		A1E1FB91815E47CCB4AA080B /* Pods_Grid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6824049817E9CB07600E243 /* Pods_Grid_GridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grid_GridUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7033AAC6236EA43E11B402C /* Pods-GridTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridTests.debug.xcconfig"; path = "Target Support Files/Pods-GridTests/Pods-GridTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCC8A9269E475E655D18B73D /* Pods-Grid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grid.release.xcconfig"; path = "Target Support Files/Pods-Grid/Pods-Grid.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8993747E27B56FC900330FB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6BE86D513D2263DCF94468 /* Pods_Grid.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8993748E27B56FCC00330FB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C70D3FF563EF29D43388E29 /* Pods_GridTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8993749827B56FCC00330FB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33426BDFCDB23B24B35159F9 /* Pods_Grid_GridUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		144954681167E68DA1EDD7A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1E1FB91815E47CCB4AA080B /* Pods_Grid.framework */,
+				D6824049817E9CB07600E243 /* Pods_Grid_GridUITests.framework */,
+				53E280E5341EFCA78272A6D7 /* Pods_GridTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89235DD327B57AEB00DF4AD1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				89235DDA27B57F3900DF4AD1 /* NetworkHelper.swift */,
+				89235DEB27B5A60400DF4AD1 /* APError.swift */,
+				89235DF427B5C4BE00DF4AD1 /* AlertItem.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		89235DD427B57BA300DF4AD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				89EE9A3427B6A66F00840F26 /* MediaInfoView */,
+				89235DDC27B57FBF00DF4AD1 /* Cells */,
+				89235DD527B57D7F00DF4AD1 /* MediaGridView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		89235DD527B57D7F00DF4AD1 /* MediaGridView */ = {
+			isa = PBXGroup;
+			children = (
+				89235DD627B57D9D00DF4AD1 /* MediaGridView.swift */,
+				89235DD827B57DAB00DF4AD1 /* MediaGridViewModel.swift */,
+			);
+			path = MediaGridView;
+			sourceTree = "<group>";
+		};
+		89235DDC27B57FBF00DF4AD1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				89235DDD27B581FB00DF4AD1 /* MediaView.swift */,
+				89235DF227B5B33700DF4AD1 /* MediaViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		89235DE127B5865900DF4AD1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				89235DE227B5866700DF4AD1 /* Int.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		89235DE827B5A54F00DF4AD1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				89235DE927B5A55B00DF4AD1 /* URLs.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8993747827B56FC900330FB0 = {
+			isa = PBXGroup;
+			children = (
+				8993748327B56FC900330FB0 /* Grid */,
+				8993749427B56FCC00330FB0 /* GridTests */,
+				8993749E27B56FCC00330FB0 /* GridUITests */,
+				8993748227B56FC900330FB0 /* Products */,
+				F0F61C33377658591BD3DE70 /* Pods */,
+				144954681167E68DA1EDD7A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8993748227B56FC900330FB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8993748127B56FC900330FB0 /* Grid.app */,
+				8993749127B56FCC00330FB0 /* GridTests.xctest */,
+				8993749B27B56FCC00330FB0 /* GridUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8993748327B56FC900330FB0 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				89235DE827B5A54F00DF4AD1 /* Constants */,
+				89235DE127B5865900DF4AD1 /* Extensions */,
+				89235DD427B57BA300DF4AD1 /* Views */,
+				89235DD327B57AEB00DF4AD1 /* Helpers */,
+				899374AE27B5701900330FB0 /* Models */,
+				8993748427B56FC900330FB0 /* GridApp.swift */,
+				8993748827B56FCC00330FB0 /* Assets.xcassets */,
+				8993748A27B56FCC00330FB0 /* Preview Content */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		8993748A27B56FCC00330FB0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8993748B27B56FCC00330FB0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8993749427B56FCC00330FB0 /* GridTests */ = {
+			isa = PBXGroup;
+			children = (
+				8993749527B56FCC00330FB0 /* GridTests.swift */,
+			);
+			path = GridTests;
+			sourceTree = "<group>";
+		};
+		8993749E27B56FCC00330FB0 /* GridUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8993749F27B56FCC00330FB0 /* GridUITests.swift */,
+				899374A127B56FCC00330FB0 /* GridUITestsLaunchTests.swift */,
+			);
+			path = GridUITests;
+			sourceTree = "<group>";
+		};
+		899374AE27B5701900330FB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				899374AF27B5703A00330FB0 /* Media.swift */,
+				89235DE427B5A3BE00DF4AD1 /* Response.swift */,
+				89235DE627B5A42D00DF4AD1 /* NetworkError.swift */,
+				89235DED27B5B1B600DF4AD1 /* Alert.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		89EE9A3427B6A66F00840F26 /* MediaInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				89EE9A3527B6A68800840F26 /* MediaInfoView.swift */,
+				89EE9A3727B6A69600840F26 /* MediaInfoViewModel.swift */,
+			);
+			path = MediaInfoView;
+			sourceTree = "<group>";
+		};
+		F0F61C33377658591BD3DE70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1E291DA10547CF4E657CB /* Pods-Grid.debug.xcconfig */,
+				FCC8A9269E475E655D18B73D /* Pods-Grid.release.xcconfig */,
+				0FE69B3607DD692B22EAC22C /* Pods-Grid-GridUITests.debug.xcconfig */,
+				5431F2A701E9DC38D4ABB207 /* Pods-Grid-GridUITests.release.xcconfig */,
+				E7033AAC6236EA43E11B402C /* Pods-GridTests.debug.xcconfig */,
+				17BFA8717BCC1ED8AAF42EF2 /* Pods-GridTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8993748027B56FC900330FB0 /* Grid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899374A527B56FCC00330FB0 /* Build configuration list for PBXNativeTarget "Grid" */;
+			buildPhases = (
+				96D8B6E92690CE0522D168D2 /* [CP] Check Pods Manifest.lock */,
+				8993747D27B56FC900330FB0 /* Sources */,
+				8993747E27B56FC900330FB0 /* Frameworks */,
+				8993747F27B56FC900330FB0 /* Resources */,
+				49EB7FDA25438AA39C4A840D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Grid;
+			productName = Grid;
+			productReference = 8993748127B56FC900330FB0 /* Grid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8993749027B56FCC00330FB0 /* GridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899374A827B56FCC00330FB0 /* Build configuration list for PBXNativeTarget "GridTests" */;
+			buildPhases = (
+				EE5BE6A1060090CF68E81494 /* [CP] Check Pods Manifest.lock */,
+				8993748D27B56FCC00330FB0 /* Sources */,
+				8993748E27B56FCC00330FB0 /* Frameworks */,
+				8993748F27B56FCC00330FB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8993749327B56FCC00330FB0 /* PBXTargetDependency */,
+			);
+			name = GridTests;
+			productName = GridTests;
+			productReference = 8993749127B56FCC00330FB0 /* GridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8993749A27B56FCC00330FB0 /* GridUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899374AB27B56FCC00330FB0 /* Build configuration list for PBXNativeTarget "GridUITests" */;
+			buildPhases = (
+				131C3FE3C9915F8001896E54 /* [CP] Check Pods Manifest.lock */,
+				8993749727B56FCC00330FB0 /* Sources */,
+				8993749827B56FCC00330FB0 /* Frameworks */,
+				8993749927B56FCC00330FB0 /* Resources */,
+				D63FF141658F1E48C02326B8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8993749D27B56FCC00330FB0 /* PBXTargetDependency */,
+			);
+			name = GridUITests;
+			productName = GridUITests;
+			productReference = 8993749B27B56FCC00330FB0 /* GridUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8993747927B56FC900330FB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					8993748027B56FC900330FB0 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					8993749027B56FCC00330FB0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 8993748027B56FC900330FB0;
+					};
+					8993749A27B56FCC00330FB0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 8993748027B56FC900330FB0;
+					};
+				};
+			};
+			buildConfigurationList = 8993747C27B56FC900330FB0 /* Build configuration list for PBXProject "Grid" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8993747827B56FC900330FB0;
+			productRefGroup = 8993748227B56FC900330FB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8993748027B56FC900330FB0 /* Grid */,
+				8993749027B56FCC00330FB0 /* GridTests */,
+				8993749A27B56FCC00330FB0 /* GridUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8993747F27B56FC900330FB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8993748C27B56FCC00330FB0 /* Preview Assets.xcassets in Resources */,
+				8993748927B56FCC00330FB0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8993748F27B56FCC00330FB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8993749927B56FCC00330FB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		131C3FE3C9915F8001896E54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Grid-GridUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49EB7FDA25438AA39C4A840D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Grid/Pods-Grid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Grid/Pods-Grid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Grid/Pods-Grid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96D8B6E92690CE0522D168D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Grid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D63FF141658F1E48C02326B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Grid-GridUITests/Pods-Grid-GridUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Grid-GridUITests/Pods-Grid-GridUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Grid-GridUITests/Pods-Grid-GridUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE5BE6A1060090CF68E81494 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GridTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8993747D27B56FC900330FB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89235DF327B5B33700DF4AD1 /* MediaViewModel.swift in Sources */,
+				89235DE527B5A3BE00DF4AD1 /* Response.swift in Sources */,
+				89235DD927B57DAB00DF4AD1 /* MediaGridViewModel.swift in Sources */,
+				8993748527B56FC900330FB0 /* GridApp.swift in Sources */,
+				899374B027B5703A00330FB0 /* Media.swift in Sources */,
+				89235DEC27B5A60400DF4AD1 /* APError.swift in Sources */,
+				89235DE327B5866700DF4AD1 /* Int.swift in Sources */,
+				89EE9A3627B6A68800840F26 /* MediaInfoView.swift in Sources */,
+				89235DF527B5C4BE00DF4AD1 /* AlertItem.swift in Sources */,
+				89235DEE27B5B1B600DF4AD1 /* Alert.swift in Sources */,
+				89235DEA27B5A55B00DF4AD1 /* URLs.swift in Sources */,
+				89EE9A3827B6A69600840F26 /* MediaInfoViewModel.swift in Sources */,
+				89235DDB27B57F3900DF4AD1 /* NetworkHelper.swift in Sources */,
+				89235DE727B5A42D00DF4AD1 /* NetworkError.swift in Sources */,
+				89235DD727B57D9D00DF4AD1 /* MediaGridView.swift in Sources */,
+				89235DDE27B581FB00DF4AD1 /* MediaView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8993748D27B56FCC00330FB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8993749627B56FCC00330FB0 /* GridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8993749727B56FCC00330FB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899374A227B56FCC00330FB0 /* GridUITestsLaunchTests.swift in Sources */,
+				899374A027B56FCC00330FB0 /* GridUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8993749327B56FCC00330FB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8993748027B56FC900330FB0 /* Grid */;
+			targetProxy = 8993749227B56FCC00330FB0 /* PBXContainerItemProxy */;
+		};
+		8993749D27B56FCC00330FB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8993748027B56FC900330FB0 /* Grid */;
+			targetProxy = 8993749C27B56FCC00330FB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		899374A327B56FCC00330FB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		899374A427B56FCC00330FB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		899374A627B56FCC00330FB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC1E291DA10547CF4E657CB /* Pods-Grid.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Grid/Preview Content\"";
+				DEVELOPMENT_TEAM = SV8M93ZRDQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negar.rollhop.Grid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		899374A727B56FCC00330FB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCC8A9269E475E655D18B73D /* Pods-Grid.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Grid/Preview Content\"";
+				DEVELOPMENT_TEAM = 967Q89UR83;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negar.rollhop.Grid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		899374A927B56FCC00330FB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7033AAC6236EA43E11B402C /* Pods-GridTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SV8M93ZRDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negar.rollhop.GridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grid.app/Grid";
+			};
+			name = Debug;
+		};
+		899374AA27B56FCC00330FB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17BFA8717BCC1ED8AAF42EF2 /* Pods-GridTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SV8M93ZRDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negar.rollhop.GridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grid.app/Grid";
+			};
+			name = Release;
+		};
+		899374AC27B56FCC00330FB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FE69B3607DD692B22EAC22C /* Pods-Grid-GridUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SV8M93ZRDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negar.rollhop.GridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Grid;
+			};
+			name = Debug;
+		};
+		899374AD27B56FCC00330FB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5431F2A701E9DC38D4ABB207 /* Pods-Grid-GridUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SV8M93ZRDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negar.rollhop.GridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Grid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8993747C27B56FC900330FB0 /* Build configuration list for PBXProject "Grid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899374A327B56FCC00330FB0 /* Debug */,
+				899374A427B56FCC00330FB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		899374A527B56FCC00330FB0 /* Build configuration list for PBXNativeTarget "Grid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899374A627B56FCC00330FB0 /* Debug */,
+				899374A727B56FCC00330FB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		899374A827B56FCC00330FB0 /* Build configuration list for PBXNativeTarget "GridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899374A927B56FCC00330FB0 /* Debug */,
+				899374AA27B56FCC00330FB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		899374AB27B56FCC00330FB0 /* Build configuration list for PBXNativeTarget "GridUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899374AC27B56FCC00330FB0 /* Debug */,
+				899374AD27B56FCC00330FB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8993747927B56FC900330FB0 /* Project object */;
+}
